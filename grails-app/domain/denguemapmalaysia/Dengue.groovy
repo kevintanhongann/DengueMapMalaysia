@@ -1,7 +1,9 @@
 package denguemapmalaysia
 
+import grails.rest.Resource
 import groovy.transform.ToString
 
+@Resource(uri='/dengue', readOnly=true)
 @ToString
 class Dengue {
 

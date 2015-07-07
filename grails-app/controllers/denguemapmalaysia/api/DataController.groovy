@@ -1,8 +1,10 @@
+package denguemapmalaysia.api
+
 import denguemapmalaysia.Dengue
 import denguemapmalaysia.DengueResponse
 import grails.converters.JSON
 
-class DengueController {
+class DataController {
 
     def all() {
         def data = Dengue.list()
