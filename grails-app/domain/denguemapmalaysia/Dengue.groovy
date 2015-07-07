@@ -1,9 +1,7 @@
 package denguemapmalaysia
 
-import grails.rest.Resource
 import groovy.transform.ToString
 
-@Resource(uri='/api/dengue', formats=['json', 'xml'], readOnly = true)
 @ToString
 class Dengue {
 
@@ -13,6 +11,8 @@ class Dengue {
     String area
     double latitude
     double longitude
+    String address
+    int week
 
     static constraints = {
         year blank:false
@@ -20,9 +20,11 @@ class Dengue {
         longitude blank:false
         province blank: false
         area blank: false
+        address blank: false
+        week min: 1, max: 52
     }
 
     static mapping = {
-      autoTimeStamp true
+      autoTimestamp true
     }
 }
